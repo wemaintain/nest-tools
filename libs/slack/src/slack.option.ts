@@ -1,0 +1,1 @@
+export const SLACK_MODULE_OPTION = Symbol('SLACK_MODULE_OPTION')

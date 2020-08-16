@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@nestjs/cli": "^7.0.0",
+    "@nestjs/microservices": "^7.4.2",
     "@nestjs/schematics": "^7.0.0",
     "@nestjs/testing": "^7.0.0",
     "@slack/events-api": "^2.3.4",
