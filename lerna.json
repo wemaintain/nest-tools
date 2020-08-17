@@ -1,0 +1,16 @@
+{
+  "version": "independent",
+  "npmClient": "npm",
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "ignoreChanges": ["*.md"],
+      "message": "chore(release): release version",
+      "version": {
+        "allowBranch": "master"
+      },
+      "createRelease": "github"
+    }
+  },
+  "packages": ["libs/*"]
+}

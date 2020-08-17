@@ -2,9 +2,19 @@
   "name": "nest-tools",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": {
+    "name": "Fabien Robert",
+    "email": "fabien@pixelone.fr"
+  },
+  "keywords": ["nest", "nestjs", "slack", "bot"],
+  "homepage": "https://github.com/wemaintain/nest-tools",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/wemaintain/nest-tools.git"
+  },
   "private": true,
   "license": "UNLICENSED",
+  "main": "dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -18,7 +28,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "lerna": "lerna"
   },
   "dependencies": {
     "@nestjs/common": "^7.0.0",
@@ -45,6 +56,7 @@
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
     "jest": "26.0.1",
+    "lerna": "^3.22.1",
     "prettier": "^1.19.1",
     "supertest": "^4.0.2",
     "ts-jest": "26.1.0",

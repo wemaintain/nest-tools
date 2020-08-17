@@ -1,4 +1,5 @@
-import { DynamicModule, Module, ModuleMetadata, Provider, Logger } from '@nestjs/common';
+import { DynamicModule, Module, Provider, Logger } from '@nestjs/common';
+import { ModuleMetadata } from '@nestjs/common/interfaces/modules';
 import { WebClient, WebClientOptions } from '@slack/web-api'
 import { EventAdapterOptions } from '@slack/events-api/dist/adapter';
 import { SlackEventService } from './slack-event.service';
