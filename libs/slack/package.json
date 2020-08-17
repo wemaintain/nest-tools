@@ -1,9 +1,13 @@
 {
   "name": "@wemaintain/slack",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Nest module for slack bots",
   "author": "wemaintain",
   "license": "Apache-2.0",
+  "main": "dist",
+  "scripts": {
+    "prepublishOnly": "tsc --build tsconfig.lib.json"
+  },
   "peerDependencies": {
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
