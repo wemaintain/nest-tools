@@ -1,6 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { SlackController } from './slack.controller';
 import { AppService } from './app.service'
+import { SlackModule } from '@wemaintain/slack'
 
 describe('SlackController', () => {
   let slackController: SlackController
@@ -8,6 +9,7 @@ describe('SlackController', () => {
 
   beforeEach(async () => {
     app = await Test.createTestingModule({
+      imports: [SlackModule],
       controllers: [SlackController],
       providers: [AppService],
     }).compile();

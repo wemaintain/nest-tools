@@ -1,6 +1,6 @@
 import { Test } from '@nestjs/testing'
 import { SlackClient, SlackModule, SlackModuleOptions } from '@wemaintain/slack/slack.module'
-import { Module } from '@nestjs/common'
+import { Controller, Module } from '@nestjs/common'
 import { SlackEventService } from './slack-event.service'
 
 describe('SlackModule', () => {
@@ -18,7 +18,10 @@ describe('SlackModule', () => {
   describe('forRoot', () => {
     it('Only WebAPi', async () => {
       const testModule = await Test.createTestingModule({
-        imports: [SlackModule.forRoot({})]
+        imports: [SlackModule.forRoot({})],
+        controllers:[
+          SlackClientConsumer,
+        ]
       }).compile()
       const app = testModule.createNestApplication()
       await expect(app.resolve(SlackClient)).resolves.toBeDefined()
@@ -28,6 +31,10 @@ describe('SlackModule', () => {
 
     it('With event api', async () => {
       const testModule = await Test.createTestingModule({
+        controllers:[
+          SlackClientConsumer,
+          SlackEventConsumer,
+        ],
         imports: [SlackModule.forRoot({
           signingSecret: 'foo'
         })]
@@ -55,8 +62,12 @@ describe('SlackModule', () => {
     })
     class ParamModule {}
 
+
     it('Only WebAPi', async () => {
       const testModule = await Test.createTestingModule({
+        controllers:[
+          SlackClientConsumer,
+        ],
         imports: [
           ParamModule,
           SlackModule.forRootAsync({
@@ -75,6 +86,10 @@ describe('SlackModule', () => {
     it('With event api', async () => {
       serviceValue.signingSecret = 'foo'
       const testModule = await Test.createTestingModule({
+        controllers: [
+          SlackClientConsumer,
+          SlackEventConsumer,
+        ],
         imports: [
           ParamModule,
           SlackModule.forRootAsync({
@@ -93,3 +108,17 @@ describe('SlackModule', () => {
   })
 
 })
+
+@Controller()
+class SlackClientConsumer {
+  constructor(
+    protected readonly slackService: SlackClient,
+  ) { }
+}
+
+@Controller()
+class SlackEventConsumer {
+  constructor(
+    protected readonly slackEvent: SlackEventService,
+  ) { }
+}

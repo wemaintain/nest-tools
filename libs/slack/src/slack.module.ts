@@ -3,7 +3,7 @@ import { ModuleMetadata } from '@nestjs/common/interfaces/modules';
 import { WebClient, WebClientOptions } from '@slack/web-api'
 import { EventAdapterOptions } from '@slack/events-api/dist/adapter';
 import { SlackEventService } from './slack-event.service';
-import { SlackScanner } from '@wemaintain/slack/slack.scanner'
+import { SlackScanner } from './slack.scanner'
 import { SLACK_MODULE_OPTION } from './slack.option'
 
 export class SlackClient extends WebClient {}
@@ -34,10 +34,10 @@ export class SlackClient extends WebClient {}
       provide: SLACK_MODULE_OPTION,
       useValue: {},
     },
-
   ],
   exports: [
-    SlackClient
+    SlackClient,
+    SlackEventService,
   ],
 })
 export class SlackModule {

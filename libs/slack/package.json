@@ -4,7 +4,7 @@
   "description": "Nest module for slack bots",
   "author": "wemaintain",
   "license": "Apache-2.0",
-  "main": "dist",
+  "main": "index.js",
   "scripts": {
     "prepublishOnly": "tsc --build tsconfig.lib.json"
   },

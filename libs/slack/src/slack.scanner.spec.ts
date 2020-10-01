@@ -1,10 +1,10 @@
 import { Controller, Injectable } from '@nestjs/common'
-import { SlackModule } from '@wemaintain/slack/slack.module'
-import { SlackEvent } from '@wemaintain/slack/slack.decorator'
+import { SlackModule } from './slack.module'
+import { SlackEvent } from './slack.decorator'
 import { Test } from '@nestjs/testing'
-import { SlackEventService } from '@wemaintain/slack/slack-event.service'
+import { SlackEventService } from './slack-event.service'
 import { ModulesContainer } from '@nestjs/core'
-import { SlackScanner } from '@wemaintain/slack/slack.scanner'
+import { SlackScanner } from './slack.scanner'
 
 @Injectable()
 class AppService {
