@@ -5,6 +5,11 @@
   "author": "wemaintain",
   "license": "Apache-2.0",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wemaintain/nest-tools.git",
+    "directory": "libs/slack"
+  },
   "scripts": {
     "prepublishOnly": "tsc --build tsconfig.lib.json"
   },
