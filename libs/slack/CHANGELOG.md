@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.3 (2020-10-20)
+
+
+### Bug Fixes
+
+* npm ci deployment ([32c21d6](https://github.com/wemaintain/nest-tools/commit/32c21d6d42e891c577189377a16f0e7aeb91aa0f))
+
+
+
+
+
 ## 0.2.2 (2020-10-05)
 
 **Note:** Version bump only for package @wemaintain/slack
