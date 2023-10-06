@@ -17,6 +17,18 @@
       ],
       "@wemaintain/slack/*": [
         "libs/slack/src/*"
+      ],
+      "@event/nest-event": [
+        "libs/nest-event/src"
+      ],
+      "@event/nest-event/*": [
+        "libs/nest-event/src/*"
+      ],
+      "@wemaintain/nest-cqrs-transporter": [
+        "libs/nest-cqrs-transporter/src"
+      ],
+      "@wemaintain/nest-cqrs-transporter/*": [
+        "libs/nest-cqrs-transporter/src/*"
       ]
     }
   }

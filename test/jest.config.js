@@ -1,4 +1,4 @@
-{
+const config ={
   "moduleFileExtensions": [
     "js",
     "json",
@@ -12,6 +12,9 @@
   },
   "moduleNameMapper": {
     "wemaintain/slack/(.*)": "<rootDir>/../libs/slack/src/$1",
-    "wemaintain/slack": "<rootDir>/../libs/slack/src"
+    "wemaintain/slack": "<rootDir>/../libs/slack/src",
+    "@event/nest-event/(.*)": "<rootDir>/../libs/nest-event/src/$1",
+    "@event/nest-event": "<rootDir>/../libs/nest-event/src"
   }
 }
+module.exports = config;

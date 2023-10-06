@@ -10,6 +10,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/slack/tsconfig.lib.json"
       }
+    },
+    "nest-cqrs-transporter": {
+      "type": "library",
+      "root": "libs/nest-cqrs-transporter",
+      "entryFile": "index",
+      "sourceRoot": "libs/nest-cqrs-transporter/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/nest-cqrs-transporter/tsconfig.lib.json"
+      }
     }
   },
   "compilerOptions": {

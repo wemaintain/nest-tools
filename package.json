@@ -6,11 +6,16 @@
     "name": "Fabien Robert",
     "email": "fabien@pixelone.fr"
   },
-  "keywords": ["nest", "nestjs", "slack", "bot"],
+  "keywords": [
+    "nest",
+    "nestjs",
+    "slack",
+    "bot"
+  ],
   "homepage": "https://github.com/wemaintain/nest-tools",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/wemaintain/nest-tools.git"
+    "type": "git",
+    "url": "https://github.com/wemaintain/nest-tools.git"
   },
   "private": true,
   "license": "UNLICENSED",
@@ -28,16 +33,18 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "test:e2e": "jest --config test/jest.config.js",
     "lerna": "lerna"
   },
   "dependencies": {
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
+    "@nestjs/cqrs": "^10.2.6",
     "@nestjs/platform-express": "^7.0.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.5.4"
+    "rxjs": "^6.5.4",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.0.0",
@@ -50,6 +57,7 @@
     "@types/jest": "25.2.3",
     "@types/node": "^13.9.1",
     "@types/supertest": "^2.0.8",
+    "@types/uuid": "^9.0.4",
     "@typescript-eslint/eslint-plugin": "3.0.2",
     "@typescript-eslint/parser": "3.0.2",
     "eslint": "7.1.0",
@@ -84,7 +92,9 @@
     ],
     "moduleNameMapper": {
       "@wemaintain/slack/(.*)": "<rootDir>/libs/slack/src/$1",
-      "@wemaintain/slack": "<rootDir>/libs/slack/src"
+      "@wemaintain/slack": "<rootDir>/libs/slack/src",
+      "@wemaintain/nest-cqrs-transporter/(.*)": "<rootDir>/libs/nest-cqrs-transporter/src/$1",
+      "@wemaintain/nest-cqrs-transporter": "<rootDir>/libs/nest-cqrs-transporter/src"
     }
   }
 }
