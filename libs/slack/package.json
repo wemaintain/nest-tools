@@ -1,6 +1,6 @@
 {
   "name": "@wemaintain/slack",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Nest module for slack bots",
   "author": "wemaintain",
   "license": "Apache-2.0",
