@@ -31,7 +31,7 @@ jobs:
       # Runs a set of commands using the runners shell
     - name: Run lerna
       run: |
-        echo "@wemaintain:registry=https://npm.pkg.github.com/" > ~/.npmrc
+        echo "registry=https://npm.pkg.github.com/" > ~/.npmrc
         echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
         git config --global user.email "no-reply@wemaintain.com"
         git config --global user.name "Release BOT"
