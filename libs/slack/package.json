@@ -11,6 +11,9 @@
     "url": "https://github.com/wemaintain/nest-tools.git",
     "directory": "libs/slack"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "prepublishOnly": "tsc --build tsconfig.lib.json"
   },
