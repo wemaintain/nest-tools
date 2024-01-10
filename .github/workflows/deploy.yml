@@ -31,7 +31,7 @@ jobs:
       # Runs a set of commands using the runners shell
     - name: Run lerna
       run: |
-        echo "${{secrets.NODE_AUTH }}" > ~/.npmrc
+        echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
         git config --global user.email "no-reply@wemaintain.com"
         git config --global user.name "Release BOT"
-        GH_TOKEN=${{ secrets.GH_TOKEN }} npm run lerna publish -- --yes
+        npm run lerna publish -- --yes
